@@ -11,7 +11,7 @@ Version:	3.01
 Release:	1
 #License:	TODO
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/authors/id/K/KW/KWILLIAMS/%{pdir}-%{version}.tar.gz
+Source0:	http://www.cpan.org/modules/by-authors/id/K/KW/KWILLIAMS/%{pdir}-%{version}.tar.gz
 # Source0-md5:	345340b241923ffb0bf1a541e8397855
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
