@@ -4,8 +4,8 @@
 #
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	PathTools
-Summary:	get pathname of current working directory
-#Summary(pl):	
+Summary:	Get pathname of current working directory
+Summary(pl):	Pobieranie ¶cie¿ki bie¿±cego katalogu
 Name:		perl-PathTools
 Version:	3.01
 Release:	1
@@ -36,8 +36,22 @@ the contents of a file, or Perl's file handles), such as concatenating
 several directory and file names into a single path, or determining
 whether a path is rooted.
 
-# %description -l pl
-# TODO
+%description -l pl
+PathTools ³±czy Cwd i File::Spec w jeden pakiet. Zosta³ zrobiony
+poniewa¿ te dwa modu³y u¿ywaj± intensywnie siebie nawzajem i
+wyci±gniêcie wspólnego kodu do oddzielnego pakietu zosta³o uznane za
+prawie niemo¿liwe.
+
+Cwd dostarcza funkcje do okre¶lania ¶cie¿ki bie¿±cego katalogu.
+Zalecane jest u¿ywanie getcwd (lub innej funkcji *cwd()) w _ca³ym_
+kodzie dla zapewnienia przeno¶no¶ci.
+
+File::Spec jest zaprojektowany do obs³ugi operacji zwykle
+przeprowadzanych na okre¶leniach plików (zwykle nazywanych "nazwami
+plików", których nie nale¿y myliæ z zawarto¶ci± plików czy perlowymi
+uchwytami plików), takich jak ³±czenie kilku katalogów i nazw plików w
+pojedyncz± ¶cie¿kê albo okre¶lanie czy ¶cie¿ka jest podana wzglêdem
+g³ównego katalogu.
 
 %prep
 %setup -q -n %{pdir}-%{version}
