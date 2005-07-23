@@ -7,17 +7,14 @@
 Summary:	Get pathname of current working directory
 Summary(pl):	Pobieranie ¶cie¿ki bie¿±cego katalogu
 Name:		perl-PathTools
-Version:	3.01
+Version:	3.09
 Release:	1
-#License:	TODO
+License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/K/KW/KWILLIAMS/%{pdir}-%{version}.tar.gz
-# Source0-md5:	345340b241923ffb0bf1a541e8397855
+# Source0-md5:	30bc214a1437db5c3ff3e6db53514acb
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
-%if %{with tests}
-BuildRequires:	perl-Test-Simple
-%endif
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -69,6 +66,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+rm -f $RPM_BUILD_ROOT{%{perl_vendorarch}/File/Spec/,%{_mandir}/man3/File::Spec::}{Cygwin,Epoc,Mac,OS2,VMS,Win32}*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
