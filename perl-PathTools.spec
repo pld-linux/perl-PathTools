@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	PathTools
 Summary:	Get pathname of current working directory
-Summary(pl):	Pobieranie ¶cie¿ki bie¿±cego katalogu
+Summary(pl.UTF-8):   Pobieranie Å›cieÅ¼ki bieÅ¼Ä…cego katalogu
 Name:		perl-PathTools
 Version:	3.23
 Release:	1
@@ -34,22 +34,22 @@ the contents of a file, or Perl's file handles), such as concatenating
 several directory and file names into a single path, or determining
 whether a path is rooted.
 
-%description -l pl
-PathTools ³±czy Cwd i File::Spec w jeden pakiet. Zosta³ zrobiony
-poniewa¿ te dwa modu³y u¿ywaj± intensywnie siebie nawzajem i
-wyci±gniêcie wspólnego kodu do oddzielnego pakietu zosta³o uznane za
-prawie niemo¿liwe.
+%description -l pl.UTF-8
+PathTools Å‚Ä…czy Cwd i File::Spec w jeden pakiet. ZostaÅ‚ zrobiony
+poniewaÅ¼ te dwa moduÅ‚y uÅ¼ywajÄ… intensywnie siebie nawzajem i
+wyciÄ…gniÄ™cie wspÃ³lnego kodu do oddzielnego pakietu zostaÅ‚o uznane za
+prawie niemoÅ¼liwe.
 
-Cwd dostarcza funkcje do okre¶lania ¶cie¿ki bie¿±cego katalogu.
-Zalecane jest u¿ywanie getcwd (lub innej funkcji *cwd()) w _ca³ym_
-kodzie dla zapewnienia przeno¶no¶ci.
+Cwd dostarcza funkcje do okreÅ›lania Å›cieÅ¼ki bieÅ¼Ä…cego katalogu.
+Zalecane jest uÅ¼ywanie getcwd (lub innej funkcji *cwd()) w _caÅ‚ym_
+kodzie dla zapewnienia przenoÅ›noÅ›ci.
 
-File::Spec jest zaprojektowany do obs³ugi operacji zwykle
-przeprowadzanych na okre¶leniach plików (zwykle nazywanych "nazwami
-plików", których nie nale¿y myliæ z zawarto¶ci± plików czy perlowymi
-uchwytami plików), takich jak ³±czenie kilku katalogów i nazw plików w
-pojedyncz± ¶cie¿kê albo okre¶lanie czy ¶cie¿ka jest podana wzglêdem
-g³ównego katalogu.
+File::Spec jest zaprojektowany do obsÅ‚ugi operacji zwykle
+przeprowadzanych na okreÅ›leniach plikÃ³w (zwykle nazywanych "nazwami
+plikÃ³w", ktÃ³rych nie naleÅ¼y myliÄ‡ z zawartoÅ›ciÄ… plikÃ³w czy perlowymi
+uchwytami plikÃ³w), takich jak Å‚Ä…czenie kilku katalogÃ³w i nazw plikÃ³w w
+pojedynczÄ… Å›cieÅ¼kÄ™ albo okreÅ›lanie czy Å›cieÅ¼ka jest podana wzglÄ™dem
+gÅ‚Ã³wnego katalogu.
 
 %prep
 %setup -q -n %{pdir}-%{version}
