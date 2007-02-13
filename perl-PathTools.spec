@@ -5,7 +5,7 @@
 %include	/usr/lib/rpm/macros.perl
 %define	pdir	PathTools
 Summary:	Get pathname of current working directory
-Summary(pl.UTF-8):   Pobieranie ścieżki bieżącego katalogu
+Summary(pl.UTF-8):	Pobieranie ścieżki bieżącego katalogu
 Name:		perl-PathTools
 Version:	3.23
 Release:	1
