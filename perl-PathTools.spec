@@ -7,13 +7,13 @@
 Summary:	Get pathname of current working directory
 Summary(pl.UTF-8):	Pobieranie ścieżki bieżącego katalogu
 Name:		perl-PathTools
-Version:	3.2701
-Release:	3
-# same as perl
+Version:	3.30
+Release:	1
+Epoch:		1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
-Source0:	http://www.cpan.org/modules/by-authors/id/K/KW/KWILLIAMS/%{pdir}-%{version}.tar.gz
-# Source0-md5:	ce871bc9368f412f62689ece6e464fa9
+Source0:	http://www.cpan.org/modules/by-authors/id/S/SM/SMUELLER/%{pdir}-%{version}.tar.gz
+# Source0-md5:	18a72d6a66bb62ce9bbb422dfa41181a
 URL:		http://search.cpan.org/dist/PathTools/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
