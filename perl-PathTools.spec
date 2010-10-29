@@ -8,7 +8,7 @@ Summary:	Get pathname of current working directory
 Summary(pl.UTF-8):	Pobieranie ścieżki bieżącego katalogu
 Name:		perl-PathTools
 Version:	3.31
-Release:	2
+Release:	3
 Epoch:		1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
