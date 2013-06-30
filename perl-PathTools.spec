@@ -7,13 +7,13 @@
 Summary:	Get pathname of current working directory
 Summary(pl.UTF-8):	Pobieranie ścieżki bieżącego katalogu
 Name:		perl-PathTools
-Version:	3.33
-Release:	2
+Version:	3.40
+Release:	1
 Epoch:		1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
 Source0:	http://www.cpan.org/modules/by-authors/id/S/SM/SMUELLER/%{pdir}-%{version}.tar.gz
-# Source0-md5:	92f0df032c399fadef2e2e647ebc3111
+# Source0-md5:	7da19c34dc2d1017cbb675a6ff4fe283
 URL:		http://search.cpan.org/dist/PathTools/
 BuildRequires:	perl-devel >= 1:5.8.0
 BuildRequires:	rpm-perlprov >= 4.1-13
@@ -21,19 +21,19 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 PathTools merges Cwd and File::Spec into a single distribution.
-This was done because the two modules use each other fairly extensively,
-and extracting the common stuff into another distribution was deemed
-nigh-impossible.
+This was done because the two modules use each other fairly
+extensively, and extracting the common stuff into another distribution
+was deemed nigh-impossible.
 
 Cwd provides functions for determining the pathname of the current
 working directory.  It is recommended that getcwd (or another *cwd()
 function) be used in _all_ code to ensure portability.
 
-File::Spec is designed to support operations commonly performed on file
-specifications (usually called "file names", but not to be confused with
-the contents of a file, or Perl's file handles), such as concatenating
-several directory and file names into a single path, or determining
-whether a path is rooted.
+File::Spec is designed to support operations commonly performed on
+file specifications (usually called "file names", but not to be
+confused with the contents of a file, or Perl's file handles), such as
+concatenating several directory and file names into a single path, or
+determining whether a path is rooted.
 
 %description -l pl.UTF-8
 PathTools łączy Cwd i File::Spec w jeden pakiet. Został zrobiony
@@ -70,17 +70,19 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT{%{perl_vendorarch}/File/Spec/,%{_mandir}/man3/File::Spec::}{Cygwin,Epoc,Mac,OS2,VMS,Win32}*
+%{__rm} $RPM_BUILD_ROOT{%{perl_vendorarch}/File/Spec/,%{_mandir}/man3/File::Spec::}{Cygwin,Epoc,Mac,OS2,VMS,Win32}*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc Changes
-%{perl_vendorarch}/*.pm
-%{perl_vendorarch}/File/Spec*
+%doc Changes README
+%{perl_vendorarch}/Cwd.pm
+%{perl_vendorarch}/File/Spec.pm
+%{perl_vendorarch}/File/Spec
 %dir %{perl_vendorarch}/auto/Cwd
-%{perl_vendorarch}/auto/Cwd/*.bs
-%attr(755,root,root) %{perl_vendorarch}/auto/Cwd/*.so
-%{_mandir}/man3/*
+%{perl_vendorarch}/auto/Cwd/Cwd.bs
+%attr(755,root,root) %{perl_vendorarch}/auto/Cwd/Cwd.so
+%{_mandir}/man3/Cwd.3pm*
+%{_mandir}/man3/File::Spec*.3pm*
