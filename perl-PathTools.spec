@@ -82,7 +82,6 @@ rm -rf $RPM_BUILD_ROOT
 %{perl_vendorarch}/File/Spec.pm
 %{perl_vendorarch}/File/Spec
 %dir %{perl_vendorarch}/auto/Cwd
-%{perl_vendorarch}/auto/Cwd/Cwd.bs
 %attr(755,root,root) %{perl_vendorarch}/auto/Cwd/Cwd.so
 %{_mandir}/man3/Cwd.3pm*
 %{_mandir}/man3/File::Spec*.3pm*
