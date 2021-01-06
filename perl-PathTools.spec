@@ -7,7 +7,7 @@ Summary:	Get pathname of current working directory
 Summary(pl.UTF-8):	Pobieranie ścieżki bieżącego katalogu
 Name:		perl-PathTools
 Version:	3.62
-Release:	0.1
+Release:	1
 Epoch:		1
 License:	GPL v1+ or Artistic
 Group:		Development/Languages/Perl
@@ -68,8 +68,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
-
-%{__rm} $RPM_BUILD_ROOT{%{perl_vendorarch}/File/Spec/,%{_mandir}/man3/File::Spec::}{Cygwin,Epoc,Mac,OS2,VMS,Win32}*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
